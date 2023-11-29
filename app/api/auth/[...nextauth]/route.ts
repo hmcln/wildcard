@@ -1,2 +1,2 @@
-export { GET } from './create-idea';
+export { GET, POST } from '../../../auth';
 export const runtime = 'edge';
