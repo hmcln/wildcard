@@ -8,27 +8,27 @@ import {
   Text
 } from '@tremor/react';
 
-import { User, Idea, Stage } from './types';
+import { Idea } from './types';
 
-export default function UsersTable({ users }: { users: User[] }) {
+export default function ideasTable({ ideas }: { ideas: Idea[] }) {
   return (
     <Table>
       <TableHead>
         <TableRow>
           <TableHeaderCell>Name</TableHeaderCell>
-          <TableHeaderCell>Username</TableHeaderCell>
-          <TableHeaderCell>Email</TableHeaderCell>
+          <TableHeaderCell>Summary</TableHeaderCell>
+          <TableHeaderCell>Goal</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {users.map((user) => (
-          <TableRow key={user.id}>
-            <TableCell>{user.name}</TableCell>
+        {ideas.map((idea) => (
+          <TableRow key={idea.id}>
+            <TableCell>{idea.name}</TableCell>
             <TableCell>
-              <Text>{user.username}</Text>
+              <Text>{idea.summary}</Text>
             </TableCell>
             <TableCell>
-              <Text>{user.email}</Text>
+              <Text>{idea.goal}</Text>
             </TableCell>
           </TableRow>
         ))}
